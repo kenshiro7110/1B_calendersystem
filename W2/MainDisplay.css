@@ -1,0 +1,28 @@
+.title{
+    position: relative;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+.subtitle{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.transit{
+    width: auto;
+}
+.money{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.calender{
+    width: 100%;
+}
+.day{
+    font-size: 30px;
+}
+.inline_brock{
+    display: inline-block;
+}
