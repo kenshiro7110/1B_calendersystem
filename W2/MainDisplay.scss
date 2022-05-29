@@ -1,0 +1,67 @@
+.title{
+    position: relative;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+.subtitle{
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    .transit {
+        width: auto;
+    }
+    .money{
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.inline_brock{
+    display: inline-block;
+}
+
+.calender {
+  margin: 0 auto;
+  thead, tbody {
+    text-align: center;
+  } 
+  thead {
+    tr {
+      th {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        width: calc(100%/7);
+        text-align: center;
+        color: #000;
+
+        ul {
+          top: 0;
+          padding: 0;
+          margin: 0;
+      
+          li {
+            margin: 5px auto;
+            padding: 5px 0;
+            width: 90%;
+            list-style: none;
+          }
+
+          .day {
+            list-style-type: none;
+            font-size: 20px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
