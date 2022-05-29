@@ -1,28 +1,64 @@
-.title{
-    position: relative;
-    font-size: 20px;
-    margin-top: 50px;
-    text-align: center;
+.title {
+  position: relative;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
 }
-.subtitle{
-    width: 100%;
-    position: relative;
-    text-align: center;
+
+.subtitle {
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
-.transit{
-    width: auto;
+
+.subtitle .transit {
+  width: auto;
 }
-.money{
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
+
+.subtitle .money {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.calender{
-    width: 100%;
+
+.inline_brock {
+  display: inline-block;
 }
-.day{
-    font-size: 30px;
+
+.calender {
+  margin: 0 auto;
 }
-.inline_brock{
-    display: inline-block;
+
+.calender thead, .calender tbody {
+  text-align: center;
 }
+
+.calender thead tr th {
+  text-align: center;
+}
+
+.calender tbody tr td {
+  width: calc(100%/7);
+  text-align: center;
+  color: #000;
+}
+
+.calender tbody tr td ul {
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.calender tbody tr td ul li {
+  margin: 5px auto;
+  padding: 5px 0;
+  width: 90%;
+  list-style: none;
+}
+
+.calender tbody tr td ul .day {
+  list-style-type: none;
+  font-size: 20px;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=MainDisplay.css.map */
