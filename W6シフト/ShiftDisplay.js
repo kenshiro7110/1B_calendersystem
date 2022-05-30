@@ -20,8 +20,8 @@ function MethodLink(){
 }
 function modal(num){
 	if (num == "1")
-		window.open("../W7週別シフト/WeekDisplay.html", null ,'top=200,left=200,width=600,height=600');
+		window.open("../W7週別シフト/WeekDisplay.html", null ,'width=800,height=350');
 	else if (num == "2")
-		window.open("../W8月別シフト/MonthDisplay.html", null ,'top=200,left=200,width=600,height=600');
+		window.open("../W8月別シフト/MonthDisplay.html", null ,'width=600,height=600');
 }
 modal(NUM);
