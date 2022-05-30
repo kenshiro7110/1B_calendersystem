@@ -14,11 +14,11 @@
   font-size: 20px;
 }
 
-.Passward {
+.Password {
   font-size: 30px;
 }
 
-.Passward > input {
+.Password > input {
   width: 150px;
   padding: 5px;
   font-size: 20px;
@@ -37,5 +37,9 @@
 
 .center {
   text-align: center;
+}
+
+.inline_brock {
+  display: inline-block;
 }
 /*# sourceMappingURL=LoginDisplay.css.map */

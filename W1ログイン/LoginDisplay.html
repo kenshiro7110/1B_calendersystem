@@ -15,14 +15,14 @@
     </div>
     <div class="ID center">
         ログインID
-        <input type="text" class="typeID">
+        <input type="text" id="LoginText" onchange="IDSet()" required>
     </div>
-    <div class="Passward center">
+    <div class="Password center">
         パスワード
-        <input type="text" class="typePassward">
+        <input type="text" id="PasswordText" onchange="PasswordSet()" required>
     </div>
     <div class="decide center">
-        <button onclick="location.href='/W2メイン/MainDisplay.html'">決定</button>
+        <button onclick="PushDecide()">決定</button>
     </div>
     
 </body>
