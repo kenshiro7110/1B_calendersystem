@@ -18,3 +18,10 @@ function MethodLink(){
 	}
 
 }
+function modal(num){
+	if (num == "1")
+		window.open("../W7週別シフト/DayDisplay.html", null ,'top=200,left=200,width=600,height=600');
+	else if (num == "2")
+		window.open("../W8月別シフト/DayDisplay.html", null ,'top=200,left=200,width=600,height=600');
+}
+modal(NUM);

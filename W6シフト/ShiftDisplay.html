@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>シフト設定</title>
     <link rel="stylesheet" href="ShiftDisplay.css">
+    <script src="MainDisplay.js"></script>
 </head>
 <body>
 <h1>シフト設定</h1>
@@ -47,11 +48,12 @@
     <form action="#">
         <select name="MethodLink">
             <option value="">選択してください
-            <option value="file:///C:/Users/Owner/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/%E6%8E%88%E6%A5%AD3%E5%89%8D%E6%9C%9F/%E9%AB%98%E5%BA%A6%E6%83%85%E5%A0%B1%E6%BC%94%E7%BF%921b/morimori/WeekDisplay.html">曜日固定シフト
-            <option value="">月のシフト
+            <option value="1">曜日固定シフト
+            <option value="2">月のシフト
         </select>
         <br>
-    <input type="button" value="時間設定" onclick="location.href = this.form.MethodLink.options[MethodLink.selectedIndex].value;">
+    <input type="button" value="時間設定" onclick="modal(this.form.MethodLink.value)">
+    <script src="ShiftDisplay.js"></script>
     </form>
     <br><br>
     <button type="button">戻る</button>
