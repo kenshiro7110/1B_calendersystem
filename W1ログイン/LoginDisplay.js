@@ -1,7 +1,3 @@
-// const LoginID=document.getElementById("LoginText");
-// const Password=document.getElementById("PasswordText");
-// const LoginID_value=LoginID.value;
-// const Password_value=Password.value;
 const trueID="aaa";
 const truePassword="123";
 LoginID_value=null;
