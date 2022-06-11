@@ -1,6 +1,6 @@
 /* 
-import ReturnShiftInformation from "./ShiftManagement.js"    //スケジュール管理部
-import Asksalary from "./MainPaymentsManagementJob.js"       //収支管理部
+import ReturnShiftInformation from "../M8スケジュール管理部/ShiftManagement.js";    //スケジュール管理部
+import Asksalary from "../M9収支管理部/MainPaymentsManagementJob.js";       //収支管理部
 
 /*****************************************************************
 ***function name     :CopyJobName
@@ -19,12 +19,16 @@ export function CopyJobName(){
 ***Date              :
 ***function          :シフト時間をスケジュール管理部に問い合わせる
 ********************************************/
-/*   
+
 export function CopyJobTime(ProcessName){
+    var sample = [];
+    for (var i = 0; i < 14; i++){
+        sample.push("12:12");
+    }
     if (ProcessName == "WeekShift"){
-        return ReturnShiftInformation("ユーザID", "WeekShift");
+        return sample;//ReturnShiftInformation("ユーザID", "WeekShift");
     }else if (ProcessName == "MonthShift"){
-        return ReturnShiftInformation("ユーザID", "MonthShift");
+       // return ReturnShiftInformation("ユーザID", "MonthShift");
     }
 }
 
@@ -84,3 +88,5 @@ export function CopyNightWagesRange(){
 export function CopyOvertime(){
     return 4444;//Asksalary("ユーザID", "Overtime");
 }        
+
+//管理部に応じて変更

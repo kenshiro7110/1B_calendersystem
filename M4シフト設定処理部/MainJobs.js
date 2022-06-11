@@ -1,5 +1,5 @@
-import * as ask from "./AskShiftData.js"       //シフト設定処理部
-import * as update from "./UpdateShiftData.js"    //シフト設定処理部
+import * as ask from "../M4シフト設定処理部/AskShiftData.js";      //シフト設定処理部
+import * as update from "../M4シフト設定処理部/UpdateShiftData.js";    //シフト設定処理部
 
 /*****************************************************************
 ***function name     :AskJobs
@@ -9,8 +9,8 @@ import * as update from "./UpdateShiftData.js"    //シフト設定処理部
  *******************************************************************/
 
 export function AskJobs(ProcessName){
-  if (ProcessName == "Shift_UI") {
-        var Shift = [];
+    var Shift = [];
+    if (ProcessName == "Shift_UI") {
         Shift.push(ask.CopyJobName());
         Shift.push(ask.CopyHourWages());
         Shift.push(ask.CopyTrasCosts());
@@ -19,12 +19,12 @@ export function AskJobs(ProcessName){
         var NightWages_time = ask.CopyNightWagesRange();
         Shift.push(NightWages_time[0]);
         Shift.push(NightWages_time[1]);
-        return Shift;
     } else if (ProcessName == "WeekShift_UI") {
-        return CopyJobtime("WeekShift");
+        Shift = ask.CopyJobTime("WeekShift");
     } else if (ProcessName == "MonthShift_UI") {
-        return CopyJobtime("MonthShift");
+        Shift = ask.CopyJobTime("MonthShift");
     }
+    return Shift;
 }
 
 /*******************************************
@@ -33,21 +33,24 @@ export function AskJobs(ProcessName){
 ***Date              :
 ***function          :シフト情報をに週別シフトのデータを送る
 ********************************************/
- 
+
 export function UpdateJobs(shiftdata, ProcessName){
     if (ProcessName == "Shift_UI") {
         update.SendJobName(shiftdata[0]);
-        update.SendHourWage(shiftdata[1]);
+        update.SendHourWages(shiftdata[1]);
         update.SendTrasCosts(shiftdata[2]);
         update.SendNightWages(shiftdata[3]);
         update.SendOvertime(shiftdata[4]);
         var NightWages_time = [];
-        Shift.push(shiftdata[5]);
-        Shift.push(shiftdata[6]);
+        NightWages_time.push(shiftdata[5]);
+        NightWages_time.push(shiftdata[6]);
         update.SendNightWagesRange(NightWages_time);
     } else if (ProcessName == "WeekShift_UI") {
-        update.SendJobtime("WeekShift", shiftdata);
+        update.SendJobTime("WeekShift", shiftdata);
     } else if (ProcessName == "MonthShift_UI") {
-        update.SendJobtime("MonthShift", shiftdata);
+        update.SendJobTime("MonthShift", shiftdata);
     }
 }
+
+
+//変更不要
